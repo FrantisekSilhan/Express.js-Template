@@ -1,3 +1,4 @@
 module.exports = {
-  siteTitle: "Template"
+  siteTitle: "Template",
+  port: 6969
 };
