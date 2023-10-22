@@ -40,4 +40,4 @@ app.use((err, req, res, next) => {
   res.status(errorCode).render("error", { site: config.siteTitle, errorCode, errorMessage });
 });
 
-app.listen(6969);
+app.listen(config.port);
