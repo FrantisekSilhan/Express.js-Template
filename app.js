@@ -2,7 +2,7 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const path = require("path");
-const util = require('util');
+// const util = require('util');
 // const db = require("./db/db");
 // const crypto = require("crypto");
 const fs = require("fs");
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 fs.readdirSync(path.join(__dirname, "routes")).forEach(file => {
   if (file.endsWith(".js")) {
-      const route = require(util.format("./rutes/%s", file));
+      const route = require(`./routes/${file}`);
       app.use("/", route);
   }
 });
